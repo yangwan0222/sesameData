@@ -1,0 +1,17 @@
+Package: sesameData
+Type: Package
+Title: Supporting Data for SeSAMe Package
+Description: Provides supporting annotation and test data for SeSAMe package.
+Version: 0.99.0
+Authors@R: c(person("Wanding", "Zhou", role = c("aut","cre"),
+             email = "zhouwanding@gmail.com"),
+             person("Hui", "Shen", role = c("aut"),
+             email = "Hui.Shen@vai.org"),
+             person("Timothy", "Triche", role = "ctb"))
+License: Artistic-2.0
+Depends: R (>= 3.5)
+Suggests: GenomicRanges, BiocGenerics
+biocViews: ExperimentData, MicroarrayData
+NeedsCompilation: no
+LazyData: TRUE
+RoxygenNote: 6.0.1
