@@ -11,7 +11,7 @@ Authors@R: c(person("Wanding", "Zhou", role = c("aut","cre"),
 License: Artistic-2.0
 Depends: R (>= 3.5)
 Suggests: GenomicRanges, BiocGenerics
-biocViews: ExperimentData, MicroarrayData
+biocViews: ExperimentData, MicroarrayData, Genome
 NeedsCompilation: no
 LazyData: TRUE
 RoxygenNote: 6.0.1
