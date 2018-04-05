@@ -9,6 +9,7 @@
 HM27.mask
 }
 \description{
-HM27.mask
+Vector of 2857 probe IDs recommended for masking in HM27 array based on
+Zhou et al. 2017 Nucleic Acids Research.
 }
 \keyword{datasets}

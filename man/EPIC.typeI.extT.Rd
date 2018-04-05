@@ -9,6 +9,6 @@
 EPIC.typeI.extT
 }
 \description{
-EPIC.typeI.extT
+Vector of 15638 T-extension Type-I probes included in EPIC array.
 }
 \keyword{datasets}

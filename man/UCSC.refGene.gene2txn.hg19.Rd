@@ -9,6 +9,7 @@
 UCSC.refGene.gene2txn.hg19
 }
 \description{
-UCSC.refGene.gene2txn.hg19
+List of 27129 elements each contains the transcript ID for a gene.
+The data was adapted from UCSC refGene (2016) for genome build hg19.
 }
 \keyword{datasets}

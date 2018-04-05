@@ -9,6 +9,6 @@
 cellref.omentum
 }
 \description{
-cellref.omentum
+Vector of 277709 binarized DNA methylation status for omentum cells.
 }
 \keyword{datasets}

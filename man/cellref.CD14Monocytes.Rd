@@ -9,6 +9,6 @@
 cellref.CD14Monocytes
 }
 \description{
-cellref.CD14Monocytes
+Vector of 351705 binarized DNA methylation status for CD14Monocytes cells.
 }
 \keyword{datasets}

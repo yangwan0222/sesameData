@@ -9,6 +9,8 @@
 hg19.chrominfo
 }
 \description{
-hg19.chrominfo
+List of two GenomicRange objects. The first represents the genomic
+coordinates for gap, the second for sequence lengths. The information
+is intended for genome build hg19.
 }
 \keyword{datasets}

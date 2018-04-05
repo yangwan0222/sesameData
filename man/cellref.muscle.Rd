@@ -9,6 +9,6 @@
 cellref.muscle
 }
 \description{
-cellref.muscle
+Vector of 292577 binarized DNA methylation status for muscle cells.
 }
 \keyword{datasets}

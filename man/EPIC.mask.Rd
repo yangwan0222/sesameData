@@ -9,6 +9,7 @@
 EPIC.mask
 }
 \description{
-EPIC.mask
+Vector of 82108 probe IDs recommended for masking in EPIC array based on
+Zhou et al. 2017 Nucleic Acids Research.
 }
 \keyword{datasets}

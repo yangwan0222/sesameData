@@ -9,6 +9,7 @@
 cytoBand.hg38
 }
 \description{
-Cytoband information of hg38
+Cytoband coordinates for genome build hg38. Data frame with columns
+chrom, chromStart, chromEnd, name and geiStain.
 }
 \keyword{datasets}

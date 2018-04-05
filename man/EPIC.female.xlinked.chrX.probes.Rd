@@ -9,6 +9,6 @@
 EPIC.female.xlinked.chrX.probes
 }
 \description{
-EPIC.female.xlinked.chrX.probes
+Vector of 3433 probe IDs for X-linked probes in EPIC array
 }
 \keyword{datasets}

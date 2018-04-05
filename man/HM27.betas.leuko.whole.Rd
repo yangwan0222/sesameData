@@ -3,12 +3,13 @@
 \docType{data}
 \name{HM27.betas.leuko.whole}
 \alias{HM27.betas.leuko.whole}
-\title{M27.betas.leuko.whole}
+\title{HM27.betas.leuko.whole}
 \format{An object of class \code{data.frame} with 27578 rows and 2 columns.}
 \usage{
 HM27.betas.leuko.whole
 }
 \description{
-M27.betas.leuko.whole
+Matrix of 27578 probes x 2 samples of whole blood DNA methylation
+beta values. Data obtained from TCGA.
 }
 \keyword{datasets}

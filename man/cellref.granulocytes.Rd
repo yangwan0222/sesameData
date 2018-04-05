@@ -9,6 +9,6 @@
 cellref.granulocytes
 }
 \description{
-cellref.granulocytes
+Vector of 347903 binarized DNA methylation status for granulocytes cells.
 }
 \keyword{datasets}

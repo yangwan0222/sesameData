@@ -9,6 +9,7 @@
 EPIC.female.clean.chrY.probes
 }
 \description{
-EPIC.female.clean.chrY.probes
+Vector of 314 probe IDs for chromosome Y probes in EPIC array excluding
+pseudoautosomal regions.
 }
 \keyword{datasets}

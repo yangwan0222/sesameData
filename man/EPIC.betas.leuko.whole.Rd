@@ -9,6 +9,7 @@
 EPIC.betas.leuko.whole
 }
 \description{
-EPIC.betas.leuko.whole
+Matrix of 485577 probes x 3 samples of whole blood DNA methylation
+beta values. Data obtained from Reinus et al 2013 PLoS One.
 }
 \keyword{datasets}

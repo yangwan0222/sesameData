@@ -9,6 +9,8 @@
 UCSC.refGene.txns.hg38
 }
 \description{
-UCSC.refGene.txns.hg38
+GRangesList object of length 66553. Each contains a transcript and
+the coordinates of its exons. The data was adapted from UCSC refGene
+(2016) for genome build hg38.
 }
 \keyword{datasets}

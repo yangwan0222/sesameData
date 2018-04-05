@@ -9,6 +9,7 @@
 ethnicity.ccs.probes
 }
 \description{
-ethnicity.ccs.probes
+Vector of 332 color-channel switching probes for ethnicity inference.
+Details in Zhou et al. 2017 Nucleic Acids Research
 }
 \keyword{datasets}

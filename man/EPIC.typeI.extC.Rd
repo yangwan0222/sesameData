@@ -9,6 +9,6 @@
 EPIC.typeI.extC
 }
 \description{
-EPIC.typeI.extC
+Vector of 46733 C-extension Type-I probes included in EPIC array.
 }
 \keyword{datasets}

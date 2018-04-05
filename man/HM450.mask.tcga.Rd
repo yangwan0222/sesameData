@@ -9,6 +9,7 @@
 HM450.mask.tcga
 }
 \description{
-HM450.mask.tcga
+Vector of 89512 probe IDs recommended for masking in HM450 array based on
+TCGA legacy.
 }
 \keyword{datasets}

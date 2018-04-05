@@ -9,6 +9,7 @@
 EPIC.mapped.probes.hg38
 }
 \description{
-EPIC.mapped.probes.hg38
+GenomicRange object for 838881 CpG probes included in EPIC array based
+on genome build hg38.
 }
 \keyword{datasets}

@@ -9,6 +9,11 @@
 EPIC.ordering
 }
 \description{
+Data frame of 865918 rows each describing the chip address of a probe.
+Column names include Probe ID, methylated allele address, unmethylated
+allele address, probe design type, color channel and abbreviations.
+}
+\details{
 EPIC probe chip address
 }
 \keyword{datasets}

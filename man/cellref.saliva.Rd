@@ -9,6 +9,6 @@
 cellref.saliva
 }
 \description{
-cellref.saliva
+Vector of 323797 binarized DNA methylation status for saliva cells.
 }
 \keyword{datasets}

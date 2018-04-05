@@ -9,6 +9,6 @@
 cellref.eosinophil
 }
 \description{
-cellref.eosinophil
+Vector of 342377 binarized DNA methylation status for eosinophil cells.
 }
 \keyword{datasets}

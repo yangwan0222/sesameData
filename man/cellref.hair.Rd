@@ -9,6 +9,6 @@
 cellref.hair
 }
 \description{
-cellref.hair
+Vector of 317041 binarized DNA methylation status for hair cells.
 }
 \keyword{datasets}

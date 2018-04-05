@@ -9,6 +9,7 @@
 EPIC.controls
 }
 \description{
-EPIC.controls
+Data frame of 635 rows each describing chip address of a control probe,
+its color channel and the control probe type in EPIC.
 }
 \keyword{datasets}

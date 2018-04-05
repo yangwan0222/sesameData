@@ -9,6 +9,6 @@
 cellref.scFat
 }
 \description{
-cellref.scFat
+Vector of 283869 binarized DNA methylation status for scFat cells.
 }
 \keyword{datasets}

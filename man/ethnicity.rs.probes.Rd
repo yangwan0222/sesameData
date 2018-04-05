@@ -9,6 +9,6 @@
 ethnicity.rs.probes
 }
 \description{
-ethnicity.rs.probes
+Vector of 59 built-in SNP probes for ethnicity inference.
 }
 \keyword{datasets}

@@ -9,6 +9,7 @@
 HM450.hg19.probe2chr
 }
 \description{
-HM450.hg19.probe2chr
+Named vector that maps 485577 HM450 probe to chromosomes based on genome
+build hg19.
 }
 \keyword{datasets}

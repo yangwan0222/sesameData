@@ -9,6 +9,6 @@
 cellref.CD4T
 }
 \description{
-cellref.CD4T
+Vector of 343658 binarized DNA methylation status for CD4T cells.
 }
 \keyword{datasets}

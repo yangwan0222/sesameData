@@ -9,6 +9,6 @@
 cellref.CD19B
 }
 \description{
-cellref.CD19B
+Vector of 342174 binarized DNA methylation status for CD19B cells.
 }
 \keyword{datasets}

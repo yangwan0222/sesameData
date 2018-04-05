@@ -3,12 +3,14 @@
 \docType{data}
 \name{agePredHorvath353}
 \alias{agePredHorvath353}
-\title{353 age predictor probes from Horvath 2013}
+\title{Age Predictor based on Horvath 2013}
 \format{An object of class \code{data.frame} with 354 rows and 23 columns.}
 \usage{
 agePredHorvath353
 }
 \description{
-353 age predictor probes from Horvath 2013
+Data frame of 353 rows each corresponding a probe. Columns include
+probe IDs and regression coefficients.
+The data is adapted from Horvath 2013 Genome Biology.
 }
 \keyword{datasets}

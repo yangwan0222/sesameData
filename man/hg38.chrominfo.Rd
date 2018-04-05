@@ -9,6 +9,8 @@
 hg38.chrominfo
 }
 \description{
-hg38.chrominfo
+List of two GenomicRange objects. The first represents the genomic
+coordinates for gap, the second for sequence lengths. The information
+is intended for genome build hg38.
 }
 \keyword{datasets}

@@ -9,6 +9,7 @@
 HM450.female.clean.chrY.probes
 }
 \description{
-M450.female.clean.chrY.probes
+Vector of 337 probe IDs for chromosome Y probes in HM450 array excluding
+pseudoautosomal regions.
 }
 \keyword{datasets}

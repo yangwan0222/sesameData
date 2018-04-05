@@ -9,6 +9,6 @@
 cellref.buccal
 }
 \description{
-cellref.buccal
+Vector of 299850 binarized DNA methylation status for buccal cells.
 }
 \keyword{datasets}

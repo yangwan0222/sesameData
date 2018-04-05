@@ -9,6 +9,7 @@
 cytoBand.hg19
 }
 \description{
-Cytoband information of hg19
+Cytoband coordinates for genome build hg19. Data frame with columns
+chrom, chromStart, chromEnd, name and geiStain.
 }
 \keyword{datasets}

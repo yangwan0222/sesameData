@@ -9,6 +9,6 @@
 cellref.CD56NK
 }
 \description{
-cellref.CD56NK
+Vector of 336647 binarized DNA methylation status for CD56NK cells.
 }
 \keyword{datasets}

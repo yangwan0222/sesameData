@@ -9,6 +9,7 @@
 HM27.controls
 }
 \description{
-HM27.controls
+Data frame of 144 rows each describing chip address of a control probe,
+its color channel and the control probe type in HM27.
 }
 \keyword{datasets}

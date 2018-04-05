@@ -9,6 +9,6 @@
 HM450.female.xlinked.chrX.probes
 }
 \description{
-HM450.female.xlinked.chrX.probes
+Vector of 3797 probe IDs for X-linked probes in HM450 array
 }
 \keyword{datasets}

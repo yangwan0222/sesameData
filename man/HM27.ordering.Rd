@@ -9,6 +9,11 @@
 HM27.ordering
 }
 \description{
+Data frame of 27578 rows each describing the chip address of a probe.
+Column names include Probe ID, methylated allele address, unmethylated
+allele address, probe design type, color channel and abbreviations.
+}
+\details{
 HM27 probe chip address
 }
 \keyword{datasets}

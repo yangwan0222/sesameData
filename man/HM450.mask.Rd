@@ -9,6 +9,7 @@
 HM450.mask
 }
 \description{
-HM450.mask
+Vector of 50186 probe IDs recommended for masking in HM450 array based on
+Zhou et al. 2017 Nucleic Acids Research.
 }
 \keyword{datasets}

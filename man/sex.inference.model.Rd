@@ -9,6 +9,7 @@
 sex.inference.model
 }
 \description{
-sex.inference.model
+Random forest model trained for sex inference. An object of class
+"randomForest"
 }
 \keyword{datasets}

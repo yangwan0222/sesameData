@@ -9,6 +9,6 @@
 cellref.liver
 }
 \description{
-cellref.liver
+Vector of 292658 binarized DNA methylation status for liver cells.
 }
 \keyword{datasets}

@@ -9,6 +9,6 @@
 HM450.typeI.extC
 }
 \description{
-HM450.typeI.extC
+Vector of 45427 C-extension Type-I probes included in HM450 array.
 }
 \keyword{datasets}

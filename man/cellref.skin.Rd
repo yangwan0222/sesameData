@@ -9,6 +9,6 @@
 cellref.skin
 }
 \description{
-cellref.skin
+Vector of 280657 binarized DNA methylation status for skin cells.
 }
 \keyword{datasets}

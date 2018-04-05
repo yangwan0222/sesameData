@@ -9,6 +9,6 @@
 cellref.CD8T
 }
 \description{
-cellref.CD8T
+Vector of 332973 binarized DNA methylation status for CD8T cells.
 }
 \keyword{datasets}

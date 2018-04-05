@@ -9,6 +9,7 @@
 ethnicity.model
 }
 \description{
-ethnicity.model
+Random forest model trained for ethnicity inference. An object of class
+"randomForest". Details in Zhou et al. 2017 Nucleic Acids Research
 }
 \keyword{datasets}

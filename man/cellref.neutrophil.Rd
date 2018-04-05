@@ -9,6 +9,6 @@
 cellref.neutrophil
 }
 \description{
-cellref.neutrophil
+Vector of 343822 binarized DNA methylation status for neutrophil cells.
 }
 \keyword{datasets}

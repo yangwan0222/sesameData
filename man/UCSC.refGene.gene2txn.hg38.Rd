@@ -9,6 +9,7 @@
 UCSC.refGene.gene2txn.hg38
 }
 \description{
-UCSC.refGene.gene2txn.hg38
+List of 27221 elements each contains the transcript ID for a gene.
+The data was adapted from UCSC refGene (2016) for genome build hg38.
 }
 \keyword{datasets}

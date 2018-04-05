@@ -9,6 +9,6 @@
 cellref.spleen
 }
 \description{
-cellref.spleen
+Vector of 302593 binarized DNA methylation status for spleen cells.
 }
 \keyword{datasets}
