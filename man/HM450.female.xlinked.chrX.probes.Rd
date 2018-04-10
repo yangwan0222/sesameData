@@ -9,6 +9,10 @@
 HM450.female.xlinked.chrX.probes
 }
 \description{
-Vector of 3797 probe IDs for X-linked probes in HM450 array
+Vector of 3797 probe IDs for X-linked probes in HM450 array.  X-linkage is
+based on intermediate DNA methylation signal in TCGA normal female samples.
+}
+\details{
+See scripts/make-data.R for processing details
 }
 \keyword{datasets}

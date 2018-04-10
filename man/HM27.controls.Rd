@@ -12,4 +12,7 @@ HM27.controls
 Data frame of 144 rows each describing chip address of a control probe,
 its color channel and the control probe type in HM27.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}

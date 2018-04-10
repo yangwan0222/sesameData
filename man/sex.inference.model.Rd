@@ -10,6 +10,9 @@ sex.inference.model
 }
 \description{
 Random forest model trained for sex inference. An object of class
-"randomForest"
+"randomForest". The training data set is 719 TCGA adjacent normals.
+}
+\details{
+See scripts/make-data.R for details
 }
 \keyword{datasets}

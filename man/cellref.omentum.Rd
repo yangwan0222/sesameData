@@ -11,4 +11,11 @@ cellref.omentum
 \description{
 Vector of 277709 binarized DNA methylation status for omentum cells.
 }
+\details{
+Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+status is determined if 80% of the samples show consistent calls and
+no conflicting calls exist.
+
+Original data source: GSE48472
+}
 \keyword{datasets}

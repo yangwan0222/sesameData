@@ -12,4 +12,7 @@ EPIC.hg19.probe2chr
 Named vector that maps 866895 EPIC probe to chromosomes based on genome
 build hg19.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}

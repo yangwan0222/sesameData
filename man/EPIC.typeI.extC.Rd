@@ -11,4 +11,7 @@ EPIC.typeI.extC
 \description{
 Vector of 46733 C-extension Type-I probes included in EPIC array.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}

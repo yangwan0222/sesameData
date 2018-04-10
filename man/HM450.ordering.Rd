@@ -14,6 +14,8 @@ Column names include Probe ID, methylated allele address, unmethylated
 allele address, probe design type, color channel and abbreviations.
 }
 \details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+
 HM450 probe chip address
 }
 \keyword{datasets}

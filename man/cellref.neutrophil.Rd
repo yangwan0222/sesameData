@@ -11,4 +11,11 @@ cellref.neutrophil
 \description{
 Vector of 343822 binarized DNA methylation status for neutrophil cells.
 }
+\details{
+Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+status is determined if 80% of the samples show consistent calls and
+no conflicting calls exist.
+
+Original data source: GSE35069
+}
 \keyword{datasets}

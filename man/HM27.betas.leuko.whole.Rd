@@ -10,6 +10,10 @@ HM27.betas.leuko.whole
 }
 \description{
 Matrix of 27578 probes x 2 samples of whole blood DNA methylation
-beta values. Data obtained from TCGA.
+beta values. Data obtained from TCGA pilot study.
+}
+\details{
+Preprocessing involves background subtraction and dye bias correction.
+See scripts/make-data.R for building details.
 }
 \keyword{datasets}

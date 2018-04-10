@@ -12,4 +12,7 @@ HM27.hg19.probe2chr
 Named vector that maps 27588 HM27 probe to chromosomes based on genome
 build hg19.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}

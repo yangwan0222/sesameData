@@ -36,7 +36,8 @@
 #' Cytoband coordinates for genome build hg19. Data frame with columns
 #' chrom, chromStart, chromEnd, name and geiStain.
 #'
-#' Source: UCSC genome browser
+#' Original data source: UCSC genome browser
+#' See scripts/make-data.R for details
 #' 
 "cytoBand.hg19"
 
@@ -45,7 +46,8 @@
 #' Cytoband coordinates for genome build hg38. Data frame with columns
 #' chrom, chromStart, chromEnd, name and geiStain.
 #'
-#' Source: UCSC genome browser
+#' Original data source: UCSC genome browser
+#' See scripts/make-data.R for details
 #' 
 "cytoBand.hg38"
 
@@ -82,6 +84,8 @@
 #' pseudoautosomal regions. Pseudoautosomal regions was identified based on
 #' cross-hybridization signal in TCGA normal samples.
 #'
+#' See scripts/make-data.R for processing details
+#'
 "EPIC.female.clean.chrY.probes"
 
 #' M450.female.clean.chrY.probes
@@ -89,6 +93,8 @@
 #' Vector of 337 probe IDs for chromosome Y probes in HM450 array excluding
 #' pseudoautosomal regions. Pseudoautosomal regions was identified based on
 #' cross-hybridization signal in TCGA normal samples.
+#'
+#' See scripts/make-data.R for processing details
 #' 
 "HM450.female.clean.chrY.probes"
 
@@ -96,6 +102,8 @@
 #'
 #' Vector of 3433 probe IDs for X-linked probes in EPIC array. X-linkage is
 #' based on intermediate DNA methylation signal in TCGA normal female samples.
+#'
+#' See scripts/make-data.R for processing details
 #' 
 "EPIC.female.xlinked.chrX.probes"
 
@@ -103,6 +111,8 @@
 #'
 #' Vector of 3797 probe IDs for X-linked probes in HM450 array.  X-linkage is
 #' based on intermediate DNA methylation signal in TCGA normal female samples.
+#'
+#' See scripts/make-data.R for processing details
 #' 
 "HM450.female.xlinked.chrX.probes"
 
@@ -259,8 +269,9 @@
 
 #' ethnicity.model
 #'
-#' Random forest model trained for ethnicity inference. An object of class
-#' "randomForest". Details in Zhou et al. 2017 Nucleic Acids Research
+#' Random forest model trained for ethnicity inference. An object of
+#' class "randomForest". Details in Zhou et al. 2017 Nucleic Acids
+#' Research. The training data set is 719 TCGA adjacent normals.
 #'
 #' See scripts/make-data.R for details
 #'
@@ -269,7 +280,7 @@
 #' sex.inference.model
 #'
 #' Random forest model trained for sex inference. An object of class
-#' "randomForest"
+#' "randomForest". The training data set is 719 TCGA adjacent normals.
 #'
 #' See scripts/make-data.R for details
 #' 
@@ -317,6 +328,8 @@
 #'
 #' List of 57956 elements each contains the gene names for a transcript.
 #' The data was adapted from UCSC refGene (2016) for genome build hg19.
+#'
+#' See scripts/make-data.R for building details.
 #' 
 "UCSC.refGene.txn2gene.hg19"
 
@@ -354,12 +367,18 @@
 #' Matrix of 485577 probes x 3 samples of whole blood DNA methylation
 #' beta values. Data obtained from Reinus et al 2013 PLoS One.
 #'
+#' Preprocessing involves background subtraction and dye bias correction.
+#' See scripts/make-data.R for building details.
+#' 
 "EPIC.betas.leuko.whole"
 
 #' HM27.betas.leuko.whole
 #'
 #' Matrix of 27578 probes x 2 samples of whole blood DNA methylation
 #' beta values. Data obtained from TCGA pilot study.
+#'
+#' Preprocessing involves background subtraction and dye bias correction.
+#' See scripts/make-data.R for building details.
 #' 
 "HM27.betas.leuko.whole"
 
@@ -367,26 +386,42 @@
 #'
 #' Matrix of 485577 probes x 3 samples of whole blood DNA methylation
 #' beta values. Data obtained from Reinus et al 2013 PLoS One.
+#'
+#' Preprocessing involves background subtraction and dye bias correction.
+#' See scripts/make-data.R for building details.
 #' 
 "HM450.betas.leuko.whole"
 
 #' Age Predictor based on Horvath 2013
 #'
 #' Data frame of 353 rows each corresponding a probe. Columns include
-#' probe IDs and regression coefficients.
-#' The data is adapted from Horvath 2013 Genome Biology.
+#' probe IDs and regression coefficients. The data is adapted from
+#' Horvath 2013 Genome Biology
+#'
+#' Adapted from https://labs.genetics.ucla.edu/horvath/htdocs/dnamage/
 #' 
 "agePredHorvath353"
 
 #' cellref.buccal
 #'
 #' Vector of 299850 binarized DNA methylation status for buccal cells.
+#'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE48472
 #' 
 'cellref.buccal'
 
 #' cellref.CD14Monocytes
 #'
 #' Vector of 351705 binarized DNA methylation status for CD14Monocytes cells.
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE35069
 #' 
 'cellref.CD14Monocytes'
 
@@ -394,53 +429,107 @@
 #'
 #' Vector of 342174 binarized DNA methylation status for CD19B cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE35069
+#' 
 'cellref.CD19B'
 
 #' cellref.CD4T
 #'
 #' Vector of 343658 binarized DNA methylation status for CD4T cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE35069
+#' 
 'cellref.CD4T'
 
 #' cellref.CD56NK
 #'
 #' Vector of 336647 binarized DNA methylation status for CD56NK cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE35069
+#' 
 'cellref.CD56NK'
 
 #' cellref.CD8T
 #'
 #' Vector of 332973 binarized DNA methylation status for CD8T cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE35069
+#' 
 'cellref.CD8T'
 
 #' cellref.eosinophil
 #'
 #' Vector of 342377 binarized DNA methylation status for eosinophil cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE35069
+#' 
 'cellref.eosinophil'
 
 #' cellref.granulocytes
 #'
 #' Vector of 347903 binarized DNA methylation status for granulocytes cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE35069
+#' 
 'cellref.granulocytes'
 
 #' cellref.hair
 #' 
 #' Vector of 317041 binarized DNA methylation status for hair cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#'
+#' Original data source: GSE48472
+#' 
 'cellref.hair'
 
 #' cellref.liver
 #' 
 #' Vector of 292658 binarized DNA methylation status for liver cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE48472
+#' 
 'cellref.liver'
 
 #' cellref.muscle
 #' 
 #' Vector of 292577 binarized DNA methylation status for muscle cells.
+#'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE48472
 #'
 'cellref.muscle'
 
@@ -448,34 +537,70 @@
 #' 
 #' Vector of 343822 binarized DNA methylation status for neutrophil cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE35069
+#' 
 'cellref.neutrophil'
 
 #' cellref.omentum
 #' 
 #' Vector of 277709 binarized DNA methylation status for omentum cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE48472
+#' 
 'cellref.omentum'
 
 #' cellref.saliva
 #' 
 #' Vector of 323797 binarized DNA methylation status for saliva cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE48472
+#' 
 'cellref.saliva'
 
 #' cellref.scFat
 #' 
 #' Vector of 283869 binarized DNA methylation status for scFat cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE48472
+#' 
 'cellref.scFat'
 
 #' cellref.skin
 #' 
 #' Vector of 280657 binarized DNA methylation status for skin cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE73894
+#' 
 'cellref.skin'
 
 #' cellref.spleen
 #' 
 #' Vector of 302593 binarized DNA methylation status for spleen cells.
 #'
+#' Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+#' status is determined if 80% of the samples show consistent calls and
+#' no conflicting calls exist.
+#' 
+#' Original data source: GSE48472
+#' 
 'cellref.spleen'

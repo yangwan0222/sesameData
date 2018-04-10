@@ -317,6 +317,13 @@ saveRDS(a, file='/secondary/projects/shen/projects/2016_12_06_sesame_home/Horvat
 load('GR.InfiniumMethylation/20160711/hm450/hm450.manifest.hg38.rda')
 load('GR.InfiniumMethylation/20160711/EPIC/EPIC.manifest.hg38.rda')
 
+discretize <- function(m) {
+  md <- as.numeric(cut(m, c(-1,0.3,0.7,1)))
+  md <- matrix(md, ncol=ncol(m))
+  dimnames(md) <- dimnames(m)
+  md
+}
+
 construct.reference <- function(m) {
   md <- discretize(m)
   nsamples <- ncol(m)

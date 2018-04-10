@@ -10,6 +10,10 @@ HM27.mask
 }
 \description{
 Vector of 2857 probe IDs recommended for masking in HM27 array based on
-Zhou et al. 2017 Nucleic Acids Research.
+Zhou et al. 2017 Nucleic Acids Research. MASK.general column of the
+original annotation is used here.
+}
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
 }
 \keyword{datasets}

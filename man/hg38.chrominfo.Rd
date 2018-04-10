@@ -13,4 +13,7 @@ List of two GenomicRange objects. The first represents the genomic
 coordinates for gap, the second for sequence lengths. The information
 is intended for genome build hg38.
 }
+\details{
+See scripts/make-data.R for building details.
+}
 \keyword{datasets}

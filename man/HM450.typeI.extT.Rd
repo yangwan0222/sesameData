@@ -11,4 +11,7 @@ HM450.typeI.extT
 \description{
 Vector of 15148 T-extension Type-I probes included in HM450 array.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}

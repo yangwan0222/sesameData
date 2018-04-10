@@ -10,7 +10,10 @@ agePredHorvath353
 }
 \description{
 Data frame of 353 rows each corresponding a probe. Columns include
-probe IDs and regression coefficients.
-The data is adapted from Horvath 2013 Genome Biology.
+probe IDs and regression coefficients. The data is adapted from
+Horvath 2013 Genome Biology
+}
+\details{
+Adapted from https://labs.genetics.ucla.edu/horvath/htdocs/dnamage/
 }
 \keyword{datasets}

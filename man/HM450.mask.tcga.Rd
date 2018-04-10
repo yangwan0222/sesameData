@@ -12,4 +12,7 @@ HM450.mask.tcga
 Vector of 89512 probe IDs recommended for masking in HM450 array based on
 TCGA legacy.
 }
+\details{
+Source: Cancer Genome Atlas Network 2013 New England Journal of Medicine
+}
 \keyword{datasets}

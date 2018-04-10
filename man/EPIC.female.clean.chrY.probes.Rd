@@ -10,6 +10,10 @@ EPIC.female.clean.chrY.probes
 }
 \description{
 Vector of 314 probe IDs for chromosome Y probes in EPIC array excluding
-pseudoautosomal regions.
+pseudoautosomal regions. Pseudoautosomal regions was identified based on
+cross-hybridization signal in TCGA normal samples.
+}
+\details{
+See scripts/make-data.R for processing details
 }
 \keyword{datasets}

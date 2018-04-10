@@ -9,7 +9,11 @@
 ethnicity.model
 }
 \description{
-Random forest model trained for ethnicity inference. An object of class
-"randomForest". Details in Zhou et al. 2017 Nucleic Acids Research
+Random forest model trained for ethnicity inference. An object of
+class "randomForest". Details in Zhou et al. 2017 Nucleic Acids
+Research. The training data set is 719 TCGA adjacent normals.
+}
+\details{
+See scripts/make-data.R for details
 }
 \keyword{datasets}

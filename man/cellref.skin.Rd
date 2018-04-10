@@ -11,4 +11,11 @@ cellref.skin
 \description{
 Vector of 280657 binarized DNA methylation status for skin cells.
 }
+\details{
+Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+status is determined if 80% of the samples show consistent calls and
+no conflicting calls exist.
+
+Original data source: GSE73894
+}
 \keyword{datasets}

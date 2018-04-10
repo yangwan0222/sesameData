@@ -12,4 +12,7 @@ EPIC.controls
 Data frame of 635 rows each describing chip address of a control probe,
 its color channel and the control probe type in EPIC.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}

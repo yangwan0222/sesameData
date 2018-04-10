@@ -11,4 +11,7 @@ ethnicity.rs.probes
 \description{
 Vector of 59 built-in SNP probes for ethnicity inference.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}

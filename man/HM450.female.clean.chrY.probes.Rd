@@ -10,6 +10,10 @@ HM450.female.clean.chrY.probes
 }
 \description{
 Vector of 337 probe IDs for chromosome Y probes in HM450 array excluding
-pseudoautosomal regions.
+pseudoautosomal regions. Pseudoautosomal regions was identified based on
+cross-hybridization signal in TCGA normal samples.
+}
+\details{
+See scripts/make-data.R for processing details
 }
 \keyword{datasets}

@@ -11,4 +11,7 @@ HM450.typeI.extC
 \description{
 Vector of 45427 C-extension Type-I probes included in HM450 array.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}

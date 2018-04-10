@@ -10,5 +10,11 @@ cellref.CD14Monocytes
 }
 \description{
 Vector of 351705 binarized DNA methylation status for CD14Monocytes cells.
+Beta values were first trichotomized by <=0.3 or >=0.7. A methylation
+status is determined if 80% of the samples show consistent calls and
+no conflicting calls exist.
+}
+\details{
+Original data source: GSE35069
 }
 \keyword{datasets}

@@ -9,6 +9,10 @@
 EPIC.female.xlinked.chrX.probes
 }
 \description{
-Vector of 3433 probe IDs for X-linked probes in EPIC array
+Vector of 3433 probe IDs for X-linked probes in EPIC array. X-linkage is
+based on intermediate DNA methylation signal in TCGA normal female samples.
+}
+\details{
+See scripts/make-data.R for processing details
 }
 \keyword{datasets}

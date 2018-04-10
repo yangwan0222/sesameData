@@ -12,4 +12,7 @@ UCSC.refGene.txn2gene.hg38
 List of 58056 elements each contains the gene names for a transcript.
 The data was adapted from UCSC refGene (2016) for genome build hg38.
 }
+\details{
+See scripts/make-data.R for building details.
+}
 \keyword{datasets}

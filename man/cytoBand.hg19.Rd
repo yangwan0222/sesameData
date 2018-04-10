@@ -12,4 +12,8 @@ cytoBand.hg19
 Cytoband coordinates for genome build hg19. Data frame with columns
 chrom, chromStart, chromEnd, name and geiStain.
 }
+\details{
+Original data source: UCSC genome browser
+See scripts/make-data.R for details
+}
 \keyword{datasets}

@@ -12,4 +12,7 @@ EPIC.mapped.probes.hg38
 GenomicRange object for 838881 CpG probes included in EPIC array based
 on genome build hg38.
 }
+\details{
+Source: http://zwdzwd.github.io/InfiniumAnnotation
+}
 \keyword{datasets}
