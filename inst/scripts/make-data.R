@@ -1,4 +1,3 @@
-
 ###############################
 ######### inst/extdata ########
 ###############################
@@ -66,6 +65,7 @@ ssets <- mclapply(names(dms), function(nm) {
 })
 names(ssets) <- idat2barcode[names(dms)]
 HM450.ssets.10normal <- ssets[1:10]
+
 
 ###############
 ### data/ #####
