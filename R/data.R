@@ -16,7 +16,7 @@ sesameDataGet <- function(title) {
         eh <- ExperimentHub()
         eh <- query(eh, 'sesameData')
         if (title %in% eh$title) {
-            assign(title, eh$ah_id[[which(eh$title == title)]], envir=cacheEnv)
+            assign(title, eh[[which(eh$title == title)]], envir=cacheEnv)
         }
     }
     return(get(title, envir=cacheEnv))
