@@ -4,10 +4,12 @@
 \alias{sesameDataGet}
 \title{Get SeSAMe data}
 \usage{
-sesameDataGet(title)
+sesameDataGet(title, verbose = FALSE)
 }
 \arguments{
 \item{title}{title of the data}
+
+\item{verbose}{whether to output ExperimentHub message}
 }
 \value{
 data object

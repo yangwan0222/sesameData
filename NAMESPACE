@@ -2,5 +2,7 @@
 
 export(sesameDataCacheAll)
 export(sesameDataGet)
+export(sesameDataList)
 import(AnnotationHub)
 import(ExperimentHub)
+import(utils)
