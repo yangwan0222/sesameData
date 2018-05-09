@@ -1,9 +1,9 @@
 
 .sesameDataGet <- function(title) {
-    eh <- ExperimentHub();
+    eh <- ExperimentHub(localHub=TRUE);
     eh <- query(eh, 'sesameData')
     if (title %in% eh$title) {
-        return(eh$ah_id[[which(eh$title == title)]]);
+        return(eh[[which(eh$title == title)]]);
     }
     return(NULL);
 }
