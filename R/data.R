@@ -1,16 +1,4 @@
 
-cacheEnv <- new.env()
-
-.sesameDataGet <- function(title) {
-    if (!exists(title, envir=cacheEnv, inherits=FALSE)) {
-        eh <- query(ExperimentHub(), 'sesameData')
-        if (title %in% eh$title) {
-            assign(title, eh[[which(eh$title == title)]], envir=cacheEnv)
-        }
-    }
-    return(get(title, envir=cacheEnv, inherits=FALSE))
-}
-
 #' Get SeSAMe data
 #'
 #' @param title title of the data
@@ -23,14 +11,10 @@ cacheEnv <- new.env()
 #' sesameDataGet('genomeInfo.hg38')
 #' @export
 sesameDataGet <- function(title, verbose=FALSE) {
-    if (verbose) {
-        .sesameDataGet(title)
-    } else {
-        suppressMessages(
-            log <- capture.output(
-                obj <- .sesameDataGet(title)))
-        obj
-    }
+    suppressMessages(
+        log <- capture.output(
+        obj <- .sesameDataGet(title)));
+    obj
 }
 
 #' List all SeSAMe data
