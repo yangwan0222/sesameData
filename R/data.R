@@ -1,13 +1,15 @@
 
-.sesameDataGet <- function(title) {
-    eh <- ExperimentHub(localHub=TRUE);
-    eh <- query(eh, 'sesameData')
-    if (title %in% eh$title) {
-        return(eh[[which(eh$title == title)]]);
-    }
-    return(NULL);
-}
+cacheEnv <- new.env()
 
+.sesameDataGet <- function(title) {
+    if (!exists(title, envir=cacheEnv, inherits=FALSE)) {
+        eh <- query(ExperimentHub(localHub=TRUE), 'sesameData')
+        if (title %in% eh$title) {
+            assign(title, eh[[which(eh$title == title)]], envir=cacheEnv)
+        }
+    }
+    return(get(title, envir=cacheEnv, inherits=FALSE))
+}
 
 #' Get SeSAMe data
 #'
@@ -21,10 +23,14 @@
 #' result <- sesameDataGet('genomeInfo.hg38')
 #' @export
 sesameDataGet <- function(title, verbose=FALSE) {
-    suppressMessages(
-        log <- capture.output(
-        obj <- .sesameDataGet(title)));
-    obj
+    if (verbose) {
+        .sesameDataGet(title)
+    } else {
+        suppressMessages(
+            log <- capture.output(
+                obj <- .sesameDataGet(title)));
+        obj
+    }
 }
 
 #' List all SeSAMe data
