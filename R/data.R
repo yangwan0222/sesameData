@@ -1,4 +1,14 @@
 
+.sesameDataGet <- function(title) {
+    eh <- ExperimentHub();
+    eh <- query(eh, 'sesameData')
+    if (title %in% eh$title) {
+        return(eh$ah_id[[which(eh$title == title)]]);
+    }
+    return(NULL);
+}
+
+
 #' Get SeSAMe data
 #'
 #' @param title title of the data
@@ -8,7 +18,7 @@
 #' @import AnnotationHub
 #' @examples
 #' 
-#' sesameDataGet('genomeInfo.hg38')
+#' result <- sesameDataGet('genomeInfo.hg38')
 #' @export
 sesameDataGet <- function(title, verbose=FALSE) {
     suppressMessages(

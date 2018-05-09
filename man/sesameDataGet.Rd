@@ -19,5 +19,5 @@ Get SeSAMe data
 }
 \examples{
 
-sesameDataGet('genomeInfo.hg38')
+result <- sesameDataGet('genomeInfo.hg38')
 }
