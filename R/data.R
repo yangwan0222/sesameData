@@ -1,12 +1,15 @@
 
 cacheEnv <- new.env()
+id <- BiocParallel::ipcid()
 
 .sesameDataGet <- function(title) {
     if (!exists(title, envir=cacheEnv, inherits=FALSE)) {
+        BiocParallel::ipclock(id)
         eh <- query(ExperimentHub(localHub=TRUE), 'sesameData')
         if (title %in% eh$title) {
             assign(title, eh[[which(eh$title == title)]], envir=cacheEnv)
         }
+        BiocParallel::ipcunlock(id)
     }
     return(get(title, envir=cacheEnv, inherits=FALSE))
 }
@@ -19,7 +22,7 @@ cacheEnv <- new.env()
 #' @import ExperimentHub
 #' @import AnnotationHub
 #' @examples
-#' 
+#'
 #' result <- sesameDataGet('genomeInfo.hg38')
 #' @export
 sesameDataGet <- function(title, verbose=FALSE) {

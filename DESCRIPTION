@@ -11,7 +11,7 @@ Authors@R: c(person("Wanding", "Zhou", role = c("aut","cre"),
 License: Artistic-2.0
 Depends: R (>= 3.5), ExperimentHub, AnnotationHub
 Suggests: GenomicRanges, BiocGenerics, sesame
-Imports: utils
+Imports: utils, BiocParallel
 biocViews: ExperimentData, MicroarrayData, Genome
 NeedsCompilation: no
 LazyData: TRUE
