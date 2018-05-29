@@ -1,0 +1,43 @@
+---
+title: "sesameData User Guide"
+shorttitle: "sesameData guide"
+package: sesameData
+output: rmarkdown::html_vignette
+fig_width: 8
+fig_height: 6
+vignette: >
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteIndexEntry{sesameData User Guide}
+    %\VignetteEncoding{UTF-8}
+---
+
+# Installation
+
+From Bioconductor
+```{r, eval=FALSE}
+source("https://bioconductor.org/biocLite.R")
+biocLite("sesameData")
+```
+
+Development version can be installed from github
+```{r, eval=FALSE}
+library(devtools)
+install_github('zwdzwd/sesameData')
+```
+
+# Usage
+
+`sesameData` package provides associated data for sesame package. It also maintains probe annotation for different Infinium platforms.
+
+Each datum is accessible through the `sesameDataGet` interface which allows package level in-memory caching. For example, data can be retrieved with the title: 
+```{r}
+library(sesameData)
+EPIC.hg38.manifest = sesameDataGet('EPIC.hg38.manifest')
+```
+
+Titles of all the available data can be shown with:
+```{r}
+sesameDataList()
+```
+
+

@@ -33,6 +33,11 @@ sesameDataGet <- function(title, verbose=FALSE) {
     }
 }
 
+#' @import curl
+has_internet <- function(){
+    !is.null(curl::nslookup("r-project.org", error = FALSE))
+}
+
 #' List all SeSAMe data
 #'
 #' @return all titles from SeSAMe Data
@@ -40,7 +45,11 @@ sesameDataGet <- function(title, verbose=FALSE) {
 #' sesameDataList()
 #' @export
 sesameDataList <- function() {
-    eh <- query(ExperimentHub(), 'sesameData')
+    if (has_internet()) {
+        eh <- query(ExperimentHub(), 'sesameData')
+    } else {
+        eh <- query(ExperimentHub(localHub = TRUE), 'sesameData')
+    }
     eh$title
 }
 
@@ -58,3 +67,14 @@ sesameDataCacheAll <- function() {
     cache(eh)
     TRUE
 }
+
+#' Create accessor for easy access of data
+#' 
+#' @export
+sesameDataCreateAccessors <- function() {
+    pkgname <- 'sesameData'
+    fl <- system.file("extdata", "metadata.csv", package=pkgname)
+    titles <- utils::read.csv(fl, stringsAsFactors=FALSE)$Title
+    createHubAccessors(pkgname, titles)
+}
+
