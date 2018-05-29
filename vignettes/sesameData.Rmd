@@ -27,9 +27,12 @@ install_github('zwdzwd/sesameData')
 
 # Usage
 
-`sesameData` package provides associated data for sesame package. It also maintains probe annotation for different Infinium platforms.
+`sesameData` package provides associated data for sesame package. It also 
+maintains probe annotation for different Infinium platforms.
 
-Each datum is accessible through the `sesameDataGet` interface which allows package level in-memory caching. For example, data can be retrieved with the title: 
+Each datum is accessible through the `sesameDataGet` interface which allows
+package level in-memory caching. For example, data can be retrieved with the
+title: 
 ```{r}
 library(sesameData)
 EPIC.hg38.manifest = sesameDataGet('EPIC.hg38.manifest')
