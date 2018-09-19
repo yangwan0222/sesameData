@@ -4,7 +4,10 @@
 \alias{sesameDataList}
 \title{List all SeSAMe data}
 \usage{
-sesameDataList()
+sesameDataList(dateAdded = latest_date)
+}
+\arguments{
+\item{dateAdded}{version of the data by date added, if "all", show all dates}
 }
 \value{
 all titles from SeSAMe Data

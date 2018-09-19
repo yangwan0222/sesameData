@@ -3,6 +3,7 @@
 export(sesameDataCacheAll)
 export(sesameDataGet)
 export(sesameDataList)
+export(sesameDataListDates)
 import(AnnotationHub)
 import(ExperimentHub)
 import(curl)

@@ -2,7 +2,7 @@ Package: sesameData
 Type: Package
 Title: Supporting Data for SeSAMe Package
 Description: Provides supporting annotation and test data for SeSAMe package.
-Version: 0.99.3
+Version: 0.99.4
 Authors@R: c(person("Wanding", "Zhou", role = c("aut","cre"),
              email = "zhouwanding@gmail.com"),
              person("Hui", "Shen", role = c("aut"),
@@ -15,4 +15,4 @@ Imports: utils, curl
 biocViews: ExperimentData, MicroarrayData, Genome
 VignetteBuilder: knitr
 NeedsCompilation: no
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

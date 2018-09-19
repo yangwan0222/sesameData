@@ -4,7 +4,10 @@
 \alias{sesameDataCacheAll}
 \title{Cache all SeSAMe data}
 \usage{
-sesameDataCacheAll()
+sesameDataCacheAll(dateAdded = latest_date)
+}
+\arguments{
+\item{dateAdded}{version of the data by date added, if "all", cache all dates}
 }
 \value{
 TRUE

@@ -1,19 +1,37 @@
 
+latest_date = "2018-09-19"
 cacheEnv <- new.env()
 
-.sesameDataGet <- function(title) {
-    if (!exists(title, envir=cacheEnv, inherits=FALSE)) {
+.sesameDataGet <- function(title, dateAdded = latest_date) {
+    key <- paste0(title,'|',dateAdded)
+    if (!exists(key, envir=cacheEnv, inherits=FALSE)) {
         eh <- query(ExperimentHub(localHub=TRUE), 'sesameData')
-        if (title %in% eh$title) {
-            assign(title, eh[[which(eh$title == title)]], envir=cacheEnv)
+        obj_id <- which(eh$title == title & eh$rdatadateadded == dateAdded)
+        if (length(obj_id)==1) {
+            assign(key, eh[[obj_id]], envir=cacheEnv)
+        } else {
+            # maybe it's older version, try cache that file
+            # it doesn't work properly under parallel
+            # one can sesameDataCacheAll(prev_date) to avoid issue
+            eh <- query(ExperimentHub(localHub=FALSE), 'sesameData')
+            obj_id <- which(eh$title == title & eh$rdatadateadded == dateAdded)
+            if (length(obj_id)==1) {
+                cache(eh[obj_id])
+                assign(key, eh[[obj_id]], envir=cacheEnv)
+            } else {
+                stop(
+                    sprintf("%s doesn't exist. Try: sesameDataCacheAll(\"%s\")",
+                    key, dateAdded))
+            }
         }
     }
-    return(get(title, envir=cacheEnv, inherits=FALSE))
+    return(get(key, envir=cacheEnv, inherits=FALSE))
 }
 
 #' Get SeSAMe data
 #'
 #' @param title title of the data
+#' @param dateAdded version of the data by date added
 #' @param verbose whether to output ExperimentHub message
 #' @return data object
 #' @import ExperimentHub
@@ -22,13 +40,13 @@ cacheEnv <- new.env()
 #' 
 #' result <- sesameDataGet('genomeInfo.hg38')
 #' @export
-sesameDataGet <- function(title, verbose=FALSE) {
+sesameDataGet <- function(title, verbose=FALSE, dateAdded = "2018-09-19") {
     if (verbose) {
-        .sesameDataGet(title)
+        .sesameDataGet(title, dateAdded = dateAdded)
     } else {
         suppressMessages(
             log <- capture.output(
-                obj <- .sesameDataGet(title)));
+                obj <- .sesameDataGet(title, dateAdded = dateAdded)));
         obj
     }
 }
@@ -40,30 +58,54 @@ has_internet <- function(){
 
 #' List all SeSAMe data
 #'
+#' @param dateAdded version of the data by date added, if "all", show all dates
 #' @return all titles from SeSAMe Data
 #' @examples
 #' sesameDataList()
 #' @export
-sesameDataList <- function() {
+sesameDataList <- function(dateAdded = latest_date) {
     if (has_internet()) {
         eh <- query(ExperimentHub(), 'sesameData')
     } else {
         eh <- query(ExperimentHub(localHub = TRUE), 'sesameData')
     }
-    eh$title
+    if (dateAdded == "all") {
+        eh$title
+    } else {
+        eh$title[eh$rdatadateadded == dateAdded]
+    }
+}
+
+#' List all versions of SeSAMe data
+#' 
+#' @return sorted unique dates of SeSAMe Data
+#' @examples
+#' sesameDataListDates()
+#' @export
+sesameDataListDates <- function() {
+    if (has_internet()) {
+        eh <- query(ExperimentHub(), 'sesameData')
+    } else {
+        eh <- query(ExperimentHub(localHub = TRUE), 'sesameData')
+    }
+    sort(unique(eh$rdatadateadded))
 }
 
 #' Cache all SeSAMe data
 #'
+#' @param dateAdded version of the data by date added, if "all", cache all dates
 #' @return TRUE
 #' @import ExperimentHub
 #' @import AnnotationHub
 #' @examples
 #' sesameDataCacheAll()
 #' @export
-sesameDataCacheAll <- function() {
-    setExperimentHubOption(arg="MAX_DOWNLOADS", 30)
+sesameDataCacheAll <- function(dateAdded = latest_date) {
+    setExperimentHubOption(arg="MAX_DOWNLOADS", 100)
     eh <- query(ExperimentHub(), 'sesameData')
+    if (dateAdded != "all") {
+        eh <- eh[eh$rdatadateadded == dateAdded]
+    }
     cache(eh)
     TRUE
 }
