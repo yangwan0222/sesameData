@@ -94,19 +94,48 @@ sesameDataListDates <- function() {
 #' Cache all SeSAMe data
 #'
 #' @param dateAdded version of the data by date added, if "all", cache all dates
+#' @param showProgress whether to show progress of download
 #' @return TRUE
 #' @import ExperimentHub
 #' @import AnnotationHub
 #' @examples
 #' sesameDataCacheAll()
 #' @export
-sesameDataCacheAll <- function(dateAdded = latest_date) {
+sesameDataCacheAll <- function(dateAdded = latest_date, showProgress = FALSE) {
     setExperimentHubOption(arg="MAX_DOWNLOADS", 100)
-    eh <- query(ExperimentHub(), 'sesameData')
-    if (dateAdded != "all") {
-        eh <- eh[eh$rdatadateadded == dateAdded]
-    }
-    cache(eh)
+    tryCatch(
+        {
+            ## load meta data
+            if (showProgress) {
+                eh <- query(ExperimentHub(), 'sesameData')
+            } else {
+                suppressMessages(log <- capture.output(
+                    eh <- query(ExperimentHub(), 'sesameData')))
+            }
+            
+            ## restrict to specified date
+            if (dateAdded != "all") {
+                eh <- eh[eh$rdatadateadded == dateAdded]
+            }
+            
+            ## load actual data
+            if (showProgress) {
+                cache(eh)
+            } else {
+                suppressMessages(log <- capture.output(cache(eh)))
+            }
+        },
+        error = function(cond) {
+            message("ExperimentHub Caching fails:")
+            message(cond, appendLF = TRUE)
+            return(FALSE)
+        },
+        warning = function(cond) {
+            message("ExperimentHub Caching causes a warning:")
+            message(cond, appendLF = TRUE)
+            return(FALSE)
+        })
+
     TRUE
 }
 
